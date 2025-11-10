@@ -31,34 +31,6 @@ Nexora is an advanced, GPU-accelerated real-time computer vision and control sys
 
 ---
 
-## 🛠️ How It Works
-
-1. **Initialization:**  
-   On startup, Nexora loads model weights and utility modules, verifies the runtime environment, and configures GPU memory usage.
-
-2. **Menu Interaction:**  
-   The user is prompted to retrieve their machine ID (for licensing/verification) or start the main automation loop.
-
-3. **Video Capture & Preprocessing:**  
-   The program captures frames from the selected monitor region, preprocesses them, and feeds them into the neural network.
-
-4. **Detection & Tracking:**  
-   Detected objects are filtered and tracked using the SORT Kalman filter, maintaining object identities even when detections are missed.
-
-5. **Target Selection & PID Control:**  
-   The system selects the optimal target (e.g., closest enemy or head) and computes the required mouse movement using a PID controller.
-
-6. **Mouse Automation:**  
-   The mouse is moved and clicks are simulated to interact with targets, with options for single-shot or continuous firing.
-
-7. **Visual Overlay:**  
-   Bounding boxes and labels are drawn on the screen for user feedback.
-
-8. **Security:**  
-   All sensitive operations and data are encrypted, and device-specific keys are used for decryption.
-
----
-
 ## 🔒 Security & Licensing
 
 - **Encrypted Model & Modules:**  
@@ -328,5 +300,6 @@ Nexora is intended for research and educational purposes only.
 ---
 
 ## 🤝 Support
+
 
 For help, licensing, or updates, join the official [Discord](https://discord.gg/28vY89jV7b)
