@@ -74,22 +74,22 @@ Go to [releases](https://github.com/ShadowCatlol/Nexora-Aim-Assist/releases) and
 3. **Obtain a license**  
    Go to the [discord server](https://discord.gg/28vY89jV7b) to obtain a license
 
-### 📄 Nexora `config.json` In-Depth Guide
-
-The `config.json` file is the central configuration for Nexora. It allows you to fine-tune the behavior, performance, and security of the program. Below is a detailed explanation of each setting:
-
-3. **Run Nexora:**  
+4. **Run Nexora:**  
    ```
    start run.bat
    ```
 
-4. **Menu Options:**  
+5. **Menu Options:**  
    - **Get Machine-ID:**  
      Retrieve your encrypted device ID for licensing.
    - **Start Aimbot:**  
      Launch the real-time tracking and automation loop.
 
 ---
+
+### 📄 Nexora `config.json` In-Depth Guide
+
+The `config.json` file is the central configuration for Nexora. It allows you to fine-tune the behavior, performance, and security of the program. Below is a detailed explanation of each setting:
 
 ### 🖥️ GPU & Performance
 
@@ -290,4 +290,5 @@ Nexora is intended for research and educational purposes only.
 
 
 For help, licensing, or updates, join the official [Discord](https://discord.gg/28vY89jV7b)
+
 
