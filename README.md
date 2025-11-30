@@ -2,7 +2,7 @@
 
 ## Overview
 
-Nexora is an advanced, GPU-accelerated real-time computer vision and control system designed for high-performance tracking and automation tasks. It leverages deep learning, Kalman filtering, and secure runtime encryption to deliver robust object detection, tracking, and automated control—primarily for gaming and research environments.
+Nexora is an advanced, GPU-accelerated real-time computer vision and control system designed for high-performance tracking and automation tasks. It leverages deep learning, Kalman filtering, and secure runtime encryption to deliver robust object detection, tracking, and automated control. Primarily for gaming and research environments.
 
 ---
 
@@ -290,5 +290,6 @@ Nexora is intended for research and educational purposes only.
 
 
 For help, licensing, or updates, join the official [Discord](https://discord.gg/28vY89jV7b)
+
 
 
