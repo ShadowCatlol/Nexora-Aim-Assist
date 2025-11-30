@@ -120,15 +120,11 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 
 ---
 
-### 👁️ Field of View & Display
-
-- **`fov`**  
-  *Type:* `number` (degrees)  
-  *Purpose:* Sets the detection field of view for targets.
+### 👁️ Display
 
 - **`aspect_ratio`**  
   *Type:* `number`  
-  *Purpose:* Sets the screen aspect ratio.  
+  *Purpose:* Sets the screen aspect ratio, use the same one you used in r6.  
   *Examples:*  
     - 16:9 → `1.7777777778`  
     - 4:3 → `1.3333333333`  
@@ -144,11 +140,11 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 
 - **`error_correction`**  
   *Type:* `number`  
-  *Purpose:* Corrects small persistent errors (integral term in PID control).
+  *Purpose:* Corrects small persistent errors (useful for moving targets).
 
 - **`braking_strength`**  
   *Type:* `number`  
-  *Purpose:* Controls how quickly the mouse slows down near the target (derivative term in PID).
+  *Purpose:* Controls how quickly the mouse slows down near the target (helps to manage overshooting).
 
 ---
 
@@ -157,7 +153,7 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 - **`quarter_turn`**  
   *Type:* `number`  
   *Purpose:* Advanced setting for mouse movement scaling.  
-  *Tip:* Leave default unless you know what you're doing.
+  *Tip:* Run the program and choose option .2) to update this value.
 
 ---
 
@@ -290,6 +286,7 @@ Nexora is intended for research and educational purposes only.
 
 
 For help, licensing, or updates, join the official [Discord](https://discord.gg/28vY89jV7b)
+
 
 
 
