@@ -78,13 +78,16 @@ Go to [releases](https://github.com/ShadowCatlol/Nexora-Aim-Assist/releases) and
 
 The `config.json` file is the central configuration for Nexora. It allows you to fine-tune the behavior, performance, and security of the program. Below is a detailed explanation of each setting:
 
----
+3. **Run Nexora:**  
+   ```
+   start run.bat
+   ```
 
-### 🔑 Authentication & Security
-
-- **`user_key`**  
-  *Type:* `string`  
-  *Purpose:* Your unique license key. Required for authentication and unlocking Nexora's features.
+4. **Menu Options:**  
+   - **Get Machine-ID:**  
+     Retrieve your encrypted device ID for licensing.
+   - **Start Aimbot:**  
+     Launch the real-time tracking and automation loop.
 
 ---
 
@@ -238,7 +241,6 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 
 ```json
 {
-    "user_key": "your_license_key",
     "gpu_mem_size": 8,
     "sensitivity": 1.25,
     "aiming_multiplier": 1,
@@ -274,21 +276,6 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 - Adjust `sensitivity`, `aiming_multiplier`, and `speed` for your preferred aiming feel.
 - Set `target_head` to `true` for headshots, or `false` for body shots.
 - Use `on_screen` to enable/disable visual overlays.
-- Always keep your `user_key` private!
-
----
-
-
-3. **Run Nexora:**  
-   ```
-   start run.bat
-   ```
-
-4. **Menu Options:**  
-   - **Get Machine-ID:**  
-     Retrieve your encrypted device ID for licensing.
-   - **Start Aimbot:**  
-     Launch the real-time tracking and automation loop.
 
 ---
 
@@ -303,3 +290,4 @@ Nexora is intended for research and educational purposes only.
 
 
 For help, licensing, or updates, join the official [Discord](https://discord.gg/28vY89jV7b)
+
