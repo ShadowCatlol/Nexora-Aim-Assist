@@ -82,6 +82,8 @@ Go to [releases](https://github.com/ShadowCatlol/Nexora-Aim-Assist/releases) and
 5. **Menu Options:**  
    - **Get Machine-ID:**  
      Retrieve your encrypted device ID for licensing.
+   - **Calculate Quarter Turn**
+     Updates `quarter_turn` value making movements more precise. 
    - **Start Aimbot:**  
      Launch the real-time tracking and automation loop.
 
@@ -291,6 +293,12 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 - Adjust `sensitivity`, `aiming_multiplier`, and `speed` for your preferred aiming feel.
 - Set `target_head` to `true` for headshots, or `false` for body shots.
 - Use `on_screen` to enable/disable visual overlays.
+- For calculating the quarter turn:
+  - Run the program and selection option number 2
+  - Choose an identifiable object and move it to the leftmost edge of your screen
+  - Now hold down the left mouse button which will begin to move your mouse to the left
+  - Now once that object reaches the middle of your screen unpress the left mouse button
+  - Your settings will automatically update
 
 ---
 
@@ -305,6 +313,7 @@ Nexora is intended for research and educational purposes only.
 
 
 For help, licensing, or updates, join the official [Discord](https://discord.gg/28vY89jV7b)
+
 
 
 
