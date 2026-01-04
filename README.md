@@ -242,10 +242,10 @@ The `config.json` file is the central configuration for Nexora. It allows you to
     "gpu_mem_size": 12,
     "// COMMENT 1": "How much GPU memory to allocate (in GB), set to less than your total GPU memory",
     
-    "sensitivity": 1,
-    "aiming_multiplier": 1,
+    "sensitivity": 0.5,
+    "aiming_multiplier": 1.5,
     "shooting_multiplier": 1.5,
-    "activate_on_button": "right",
+    "activate_on_button": "left",
     "// COMMENT 2": "Mouse button to activate aim assist (e.g., 'left', 'right')",
 
     "aspect_ratio": 1.7777777778,
@@ -254,31 +254,31 @@ The `config.json` file is the central configuration for Nexora. It allows you to
     "speed": 1,
     "// COMMENT 4": "Similiar to sensitivity, (proportion)",
 
-    "error_correction": 0.02,
+    "error_correction": 0.01,
     "// COMMENT 5": "For persistent small errors, useful for moving targets (integral)",
 
-    "braking_strength": 0.9,
+    "braking_strength": 0.05,
     "// COMMENT 6": "For overshooting targets (derivative)",
 
-    "quarter_turn": 1390,
+    "quarter_turn": 800,
     "// COMMENT 7": "Leave this unless you know what you're doing",
 
-    "min_presence_score": 0.75,
+    "min_presence_score": 0.78,
     "max_iou": 0.5,
 
     "ads_tolerance": 15,
     "ads_time": 0.02,
-    
 
     "monitor_index": 1,
-    "monitor_count": 2,
+    "// COMMENT 8": "Index of the monitor to capture (1 for primary monitor, 2 for secondary, etc.)",
 
     "target_head": true,
     "single_shot": false,
+    "trigger_bot": false,
     "first_person": true,
     "on_screen": true,
     
-    "center_offset": [0, 10],
+    "center_offset": [0, 0],
     "circle_size": 0.15,
     "pulldown_rate": 5,
     "line_thickness": 4
@@ -313,6 +313,7 @@ Nexora is intended for research and educational purposes only.
 
 
 For help, licensing, or updates, join the official [Discord](https://discord.gg/28vY89jV7b)
+
 
 
 
