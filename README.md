@@ -196,10 +196,6 @@ The `config.json` file is the central configuration for Nexora. It allows you to
   *Type:* `boolean`  
   *Purpose:* Optimize for first-person games.
 
-- **`on_screen`**  
-  *Type:* `boolean`  
-  *Purpose:* Draw overlays and feedback on the screen.
-
 ---
 
 ### 🖱️ Mouse & Visuals
@@ -245,7 +241,6 @@ The `config.json` file is the central configuration for Nexora. It allows you to
     "single_shot": false,
     "trigger_bot": false,
     "first_person": true,
-    "on_screen": true,
     "center_offset": [0, 0],
     "circle_size": 0.12,
     "pulldown_rate": 5,
@@ -259,8 +254,6 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 
 - Adjust `sensitivity`, `aiming_multiplier`, and `speed` for your preferred aiming feel.
 - Set `target_head` to `true` for headshots, or `false` for body shots.
-- Use `on_screen` to enable/disable visual overlays.
-- Always keep your `user_key` private!
 
 ---
 
