@@ -2,7 +2,7 @@
 
 ## Overview
 
-Nexora is an advanced, GPU-accelerated real-time computer vision and control system designed for high-performance tracking and automation tasks. It leverages deep learning, Kalman filtering, and secure runtime encryption to deliver robust object detection, tracking, and automated control. Primarily for gaming and research environments.
+Nexora is an advanced, GPU-accelerated real-time computer vision and control system designed for high-performance tracking and automation tasks. It leverages deep learning, Kalman filtering, and secure runtime encryption to deliver robust object detection, tracking, and automated control—primarily for gaming and research environments.
 
 ---
 
@@ -12,7 +12,7 @@ Nexora is an advanced, GPU-accelerated real-time computer vision and control sys
   Utilizes a custom YOLO-based neural network for fast and accurate detection of targets (e.g., "ally", "enemy", "head") in live video streams.
 
 - **PID-Controlled Mouse Automation:**  
-  Implements a PID controller to smoothly and precisely move the mouse cursor toward detected targets, with customizable sensitivity and aiming multipliers.
+   smoothly and precisely move the mouse cursor toward detected targets, with customizable sensitivity and aiming multipliers. Supports both first-person and third-person aiming modes, and includes advanced PID tuning options (`speed`, `error_correction`, `momentum`) for optimal control.smoothly and precisely move the mouse cursor toward detected targets, with customizable sensitivity and aiming multipliers.
 
 - **Kalman Filter-Based Tracking:**  
   Integrates the SORT algorithm for persistent tracking of objects, even across missed detections, ensuring stable and reliable automation.
@@ -74,24 +74,11 @@ Go to [releases](https://github.com/ShadowCatlol/Nexora-Aim-Assist/releases) and
 3. **Obtain a license**  
    Go to the [discord server](https://discord.gg/28vY89jV7b) to obtain a license
 
-4. **Run Nexora:**  
-   ```
-   start run.bat
-   ```
-
-5. **Menu Options:**  
-   - **Get Machine-ID:**  
-     Retrieve your encrypted device ID for licensing.
-   - **Calculate Quarter Turn**
-     Updates `quarter_turn` value making movements more precise. 
-   - **Start Aimbot:**  
-     Launch the real-time tracking and automation loop.
-
----
-
 ### 📄 Nexora `config.json` In-Depth Guide
 
 The `config.json` file is the central configuration for Nexora. It allows you to fine-tune the behavior, performance, and security of the program. Below is a detailed explanation of each setting:
+
+---
 
 ### 🖥️ GPU & Performance
 
@@ -122,11 +109,11 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 
 ---
 
-### 👁️ Display
+### 👁️ Field of View & Display
 
 - **`aspect_ratio`**  
   *Type:* `number`  
-  *Purpose:* Sets the screen aspect ratio, use the same one you used in r6.  
+  *Purpose:* Sets the screen aspect ratio.  
   *Examples:*  
     - 16:9 → `1.7777777778`  
     - 4:3 → `1.3333333333`  
@@ -142,11 +129,11 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 
 - **`error_correction`**  
   *Type:* `number`  
-  *Purpose:* Corrects small persistent errors (useful for moving targets).
+  *Purpose:* Corrects small persistent errors (integral term in PID control).
 
-- **`braking_strength`**  
+- **`momentum`**  
   *Type:* `number`  
-  *Purpose:* Controls how quickly the mouse slows down near the target (helps to manage overshooting).
+  *Purpose:* Controls overshooting and smoothness (derivative term in PID control).
 
 ---
 
@@ -155,7 +142,7 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 - **`quarter_turn`**  
   *Type:* `number`  
   *Purpose:* Advanced setting for mouse movement scaling.  
-  *Tip:* Run the program and choose option .2) to update this value.
+  *Tip:* Leave default unless you know what you're doing.
 
 ---
 
@@ -189,10 +176,6 @@ The `config.json` file is the central configuration for Nexora. It allows you to
   *Type:* `number`  
   *Purpose:* Which monitor to use for detection (1 = primary).
 
-- **`monitor_count`**  
-  *Type:* `number`  
-  *Purpose:* Total number of monitors connected.
-
 ---
 
 ### 🎯 Targeting & Automation
@@ -204,6 +187,10 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 - **`single_shot`**  
   *Type:* `boolean`  
   *Purpose:* Enable single-shot firing mode.
+
+- **`trigger_bot`**  
+  *Type:* `boolean`  
+  *Purpose:* Automatically fires when a target is detected.
 
 - **`first_person`**  
   *Type:* `boolean`  
@@ -238,52 +225,32 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 ### 📝 Example
 
 ```json
-{   
+{
     "gpu_mem_size": 12,
-    "// COMMENT 1": "How much GPU memory to allocate (in GB), set to less than your total GPU memory",
-    
     "sensitivity": 0.5,
-    "aiming_multiplier": 1.5,
+    "aiming_multiplier": 1,
     "shooting_multiplier": 1.5,
     "activate_on_button": "left",
-    "// COMMENT 2": "Mouse button to activate aim assist (e.g., 'left', 'right')",
-
     "aspect_ratio": 1.7777777778,
-    "// COMMENT 3": "Use this chart: 16:9 = 1.7777777778, 4:3 = 1.3333333333, 21:9 = 2.3333333333",
-
-    "speed": 1,
-    "// COMMENT 4": "Similiar to sensitivity, (proportion)",
-
-    "error_correction": 0.01,
-    "// COMMENT 5": "For persistent small errors, useful for moving targets (integral)",
-
-    "braking_strength": 0.05,
-    "// COMMENT 6": "For overshooting targets (derivative)",
-
+    "speed": 1.3,
+    "error_correction": 0.05,
+    "momentum": 0.07,
     "quarter_turn": 800,
-    "// COMMENT 7": "Leave this unless you know what you're doing",
-
-    "min_presence_score": 0.78,
+    "min_presence_score": 0.8,
     "max_iou": 0.5,
-
     "ads_tolerance": 15,
     "ads_time": 0.02,
-
     "monitor_index": 1,
-    "// COMMENT 8": "Index of the monitor to capture (1 for primary monitor, 2 for secondary, etc.)",
-
     "target_head": true,
     "single_shot": false,
     "trigger_bot": false,
     "first_person": true,
     "on_screen": true,
-    
     "center_offset": [0, 0],
-    "circle_size": 0.15,
+    "circle_size": 0.12,
     "pulldown_rate": 5,
     "line_thickness": 4
 }
-
 ```
 
 ---
@@ -293,12 +260,21 @@ The `config.json` file is the central configuration for Nexora. It allows you to
 - Adjust `sensitivity`, `aiming_multiplier`, and `speed` for your preferred aiming feel.
 - Set `target_head` to `true` for headshots, or `false` for body shots.
 - Use `on_screen` to enable/disable visual overlays.
-- For calculating the quarter turn:
-  - Run the program and selection option number 2
-  - Choose an identifiable object and move it to the leftmost edge of your screen
-  - Now hold down the left mouse button which will begin to move your mouse to the left
-  - Now once that object reaches the middle of your screen unpress the left mouse button
-  - Your settings will automatically update
+- Always keep your `user_key` private!
+
+---
+
+
+3. **Run Nexora:**  
+   ```
+   start run.bat
+   ```
+
+4. **Menu Options:**  
+   - **Get Machine-ID:**  
+     Retrieve your encrypted device ID for licensing.
+   - **Start Aimbot:**  
+     Launch the real-time tracking and automation loop.
 
 ---
 
@@ -313,10 +289,3 @@ Nexora is intended for research and educational purposes only.
 
 
 For help, licensing, or updates, join the official [Discord](https://discord.gg/28vY89jV7b)
-
-
-
-
-
-
-
